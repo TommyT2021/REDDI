@@ -16,7 +16,7 @@
 }
 
 .menu-side {
-    width: 345px;
+    width: 300px;
     position: fixed;
     left: 0;
     top: 0;
@@ -45,6 +45,7 @@
     width: 100%;
     margin-bottom: 1.3rem;
     padding-left: 1rem;
+    padding-right: 1rem; /*Mya-padding for right*/
     
 }
 
@@ -53,7 +54,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: var(--blue-color);
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .full-menu a{
@@ -70,7 +71,7 @@
 }
 
 #nav-toggle:checked + .menu-side {
-    width: 70px;
+    width: 0px; /*Mya: originally 70px*/
 }
 
 #nav-toggle:checked + .menu-side .citi,
@@ -79,7 +80,12 @@
 }
 
 #nav-toggle:checked + .menu-side li a {
-    padding-left: .5rem;    
+    padding-left: .5rem;  
+}
+
+/*Mya - get rid of the menu bar when the nav icon is toggled*/
+#nav-toggle:checked + .menu-side{
+    display: none;
 }
 
 #nav-toggle:checked + .menu-side .citi h2 span:last-child,
@@ -88,17 +94,22 @@
 }
 
 #nav-toggle:checked ~ .main-content{
-    margin-left: 70px;
+    margin-left: 0px; /*Mya - 70px for a menu side bar with icons after toggle*/
+    
 }
 
+
+
 #nav-toggle:checked ~ .main-content header{
-    width: calc(100% - 70px);
-    left: 70px;
+    width: calc(100%); /*Mya - get rid of REDDI when toggled: calc(100% - 70px)*/
+    left: 0px; /*Mya- originally 70px*/
 }
 
 .main-content {
-    transition: margin-left 300ms;
-    margin-left: 345px;
+    background-color: #F5F5F7; /*add background color*/
+    padding-top: 100px;
+    transition: margin-left 50ms;
+    margin-left: 300px; /*Mya - 100px for wider blocks of articles*/
 }
 
 .material-icons {
@@ -112,11 +123,11 @@ header {
     padding: 1rem 1.5rem;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     position: fixed;
-    left: 345px;
-    width: calc(100% - 345px);
+    left: 300px; /*new*/
+    width: calc(100% - 300px); /*new changes*/
     top: 0;
     z-index: 100;
-    transition: left 300ms;
+    transition: left 40ms;
 }
 
 header h2 {
