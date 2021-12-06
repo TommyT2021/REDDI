@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --blue-color: #004486;
+    --red-color: #ef1620;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    }
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #f3f3f3;
+    overflow-y:scroll;
+}
+
+.side{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    height: calc(100% - 2rem);
+    width:78px;
+    background: linear-gradient(rgba(0,162,112),rgba(55,148,155),rgba(7,89,162));
+    padding: 6px 14px;
+    border-radius: 10px 10px 10px 10px;
+    transition: all.5s ease;
+}
+
+.side.active{
+    width: 240px;
+}
+
+.side .citi_content .citi {
+    color: #fff;
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all .5s ease;
+
+}
+
+.side.active .citi_content .citi{
+    opacity: 1;
+    pointer-events: none;
+
+}
+
+.citi_content .citi img{
+    font-size: 30px;
+    margin-right: 5px;
+    vertical-align: -2%;
+}
+
+.side #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 18px;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.side.active #btn{
+    left: 85%;
+}
+
+.side ul{
+    margin-top: 0px;
+}
+
+.side ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+
+}
+
+.side ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all .4s ease;
+    border-radius: 10px 10px 10px 10px;
+    white-space: nowrap;
+}
+
+.side ul li a:hover{
+    color: var(--blue-color);
+    background: #fff;
+}
+
+.side .material-name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+
+}
+
+.side.active .material-name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.side ul li a span{
+    height: 50px;
+    min-width:50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.side .profile_content{
+    position: absolute;
+    color: #fff;
+    bottom: 1rem;
+    left: 1rem;
+    width: 100%;
+}
+
+.side .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+}
+
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+}
+
+.side.active .profile .profile_details .name_job{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile_details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.profile .profile_details .name_job{
+    margin-left: 10px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all .5s ease;
+
+}
+
+.profile .profile_details .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile_details .job{
+    font-size: 12px;
+}
+
+.profile #log_out {
+    position: absolute;
+    left: 85%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 12px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+
+}
+
+.side.active .profile #log_out{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.main{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 100px);
+    left: 100px;
+    background: #fff;
+    border-radius: 10px 10px 10px 10px;
+    top: 1rem;
+    height: calc(100% - 2em);
+    transition: all .5s ease;
+}
+
+.side.active ~ .main{
+    width: calc(100% - 290px);
+    left: 272px;
+
+
+}
