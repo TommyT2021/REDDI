@@ -2,96 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-<script type="text/javascript" src="index.js"></script>
-
+    <title>REDDI</title>
 </head>
 
 <body>
-    <input type="checkbox" id="nav-toggle">
-    <div class="menu-side">
-        <div class="citi">
-            <h2><img src="./Images/Citi.svg.png" width="40px" alt=""> REDDI</h2>
-        </div>
-
-        <div class="full-menu">
-            <ul>
-                <li>
-                    <a href="" class="active"><span class="material-icons">home</span>
-                    <span>Dashboard</span></a>
-                </li>
-                <li>
-                    <a href=""><span class="material-icons">logout</span>
-                    <span>Logout</span></a>
-                </li>
-            </ul>
+    <div class="side">
+        <div class="citi_content">
+            <div class="citi">
+                <h2><img src="Citi.svg.png" width="40px" alt="">Ventures</h2>
+            </div>
+            <i>
+            <span class="material-icons" id="btn">menu</span>
+            </i>
+        </div> 
+        <ul class="side_list">
+            <li>
+                <a href="#">
+                    <span class="material-icons">home</span>
+                    <span class="material-name">Dashboard</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span>-->
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons">assessment</span>
+                    <span class="material-name">Analytics</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span>-->
+            </li>            
+            <li>
+                <a href="#">
+                    <span class="material-icons">event</span>
+                    <span class="material-name">Events</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span>-->
+            </li>            
+            <li>
+                <a href="#">
+                    <span class="material-icons">bookmarks</span>
+                    <span class="material-name">Bookmarks</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span>-->
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons">settings</span>
+                    <span class="material-name">Settings</span>
+                </a>
+                <!-- <span class="tooltip">Dashboard</span>-->
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class ="profile">
+                <div class="profile_details">
+                    <img src="Icon_cropped.png" alt="">
+                <div class="name_job">
+                    <div class="name">Tommy Truong</div>
+                    <div class="job">Administrator</div>
+                </div>
+                </div>
+                <span class="material-icons" id="log_out">logout</span>
+            </div>
         </div>
     </div>
 
-    <div class="main-content">
-        <header>
-            <h2>
-                <label for="nav-toggle">
-                    <span class="material-icons">menu</span>
-                </label>
-                Dashboard
-            </h2>
-            <div class= "searcher">
-                <span class="material-icons">search</span>
-                <input type="search" placeholder="Search By Term">
-            </div>
-            <div class="user-pfp">
-                <img src="./Images/Icon_cropped.png" width="40px" height="40px" alt="">
-                <div>
-                    <h4>Tommy Truong</h4>
-                    <small>CUPID Intern</small>
-                </div>
-            </div>
-        </header>
 
-        <!-- <main>
-            <div class="news">
-                <div class="news-single">
-                    <h1>Update #1</h1>
-                    <span>Projects</span>
-                    <a href="http://rss.cnn.com/rss/cnn_tech.rss">
-                        <img src="https://www.w3schools.com/xml/pic_rss.gif" width="36" height="14">
-                        </a>
-                </div>
-                <div class="news-single">
-                    <h1>Update #2</h1>
-                    <span>Projects</span>
-                </div>
-                <div class="news-single">
-                    <h1>Update #3</h1>
-                    <span>Projects</span>
-                </div>
-                <div class="news-single">
-                    <h1>Update #4</h1>
-                    <span>Projects</span>
-                </div>
-
-            </div>
-        </main> -->
-    
+    <div class="main">   
         <rssapp-wall id="XW7AnoYnslGDJ8ZX"></rssapp-wall>
-        
-        
         <script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
-        
-        
-
-        
-    
-
-       
     </div>
 
+    <script>
+    let btn = document.querySelector("#btn");
+    let side = document.querySelector(".side");
+    
+    btn.onclick = function() {
+        side.classList.toggle("active");
+    }
 
+
+    </script>
 
 </body>
 </html>
